@@ -1,0 +1,84 @@
+.post-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // Adjust the width as needed
+  gap: 20px;
+  justify-content: center; /* Center horizontally */
+  margin: 0 auto; /* Center horizontally */
+  width: max-content; /* Ensures the grid takes only the necessary width */
+}
+
+  
+  .post-card {
+    background-color: whitesmoke;
+    border: 1px solid #b7b7b7;
+    border-radius: 7px;
+    padding: 15px;
+  }
+  .live-stats-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* You can change the color to fit your design */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .live-stats-button:hover {
+    background-color: #0056b3; /* Change the color on hover if desired */
+  }
+  
+  .post-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .name {
+    font-family: system-ui, sans-serif;
+    font-size: 18px;
+    color: #212121;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .headline {
+    font-family: system-ui, sans-serif;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .timestamp {
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .post-image {
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .status {
+    text-align: left;
+    margin: 10px 0 0 0;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  

@@ -4,16 +4,19 @@
   background-color: rgba(255, 255, 255, 0.87);
   display: flex;
   align-items: center;
+  position: relative; /* Add position relative to position absolute children */
 }
+
 .linkedin-logo {
   width: 65px;
   margin-left: 20px;
 }
+
 .react-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 55%;
+  width: calc(100% - 210px); /* Adjust width to accommodate the search input and close icon */
   margin-left: 30px;
 }
 
@@ -34,6 +37,7 @@
   position: absolute;
   right: 30px;
   cursor: pointer;
+  z-index: 1; /* Ensure the user logo is above other elements */
 }
 
 .popup-position {
@@ -45,13 +49,14 @@
 
 .search-results {
   position: absolute;
-  left: 100px;
+  left: 80px; /* Adjust left position */
   top: 60px;
   width: 240px;
   height: auto;
   background-color: white;
   border-radius: 10px;
   border: 1px solid #bbbbbb;
+  z-index: 99; /* Ensure search results are above other elements */
 
   .search-inner {
     display: flex;
@@ -60,6 +65,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
+
     img {
       width: 40px;
       height: 40px;

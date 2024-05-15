@@ -9,7 +9,7 @@ $linkedinBlue3: #004c75;
 
   label {
     font-family: system-ui;
-    margin-bottom: -15px;
+    margin-bottom: 5px;
   }
 
   .edit-input {
@@ -21,6 +21,61 @@ $linkedinBlue3: #004c75;
 .save-container {
   display: flex;
   justify-content: center;
+}
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 120px; // Adjust as needed
+  height: 34px;
+  line-height: 34px;
+  color: white;
+  text-align: center;
+  font-family: system-ui;
+  font-size: 14px; // Adjust as needed
+  cursor: pointer;
+  padding-right: 20px; // Add extra spac
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey; // Grey when unchecked
+    transition: background-color 0.4s, transform 0.4s;
+    border-radius: 34px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.4s;
+    }
+  }
+
+  .toggle-checkbox:checked + .slider {
+    background-color: $linkedinBlue1; // Blue when checked
+
+    &:before {
+      transform: translateX(106px); // Adjusted to match the total width of the label
+    }
+  }
+
+  // Move the text above the slider
+  span {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.toggle-checkbox {
+  display: none;
 }
 
 .save-btn {

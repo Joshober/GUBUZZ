@@ -4,26 +4,36 @@
   height: auto;
   background-color: whitesmoke;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-
-  flex-direction: column;
   padding: 20px;
-  .name {
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.9);
-    font-weight: 600;
-    text-align: left;
-    margin-top: -7px;
-  }
+  margin-left: 0px;
+}
 
-  .headline {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.9);
-    margin-top: -15px;
-  }
-  .popup-option {
-    cursor: pointer;
-  }
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 10px; /* Adjust the size as needed */
+  height: 10px; /* Adjust the size as needed */
+  border-radius: 50%;
+margin: 10px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.9);
+  margin: 0;
+}
+
+.headline {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
+  margin-top: 5px;
+}
+
+.popup-option {
+  cursor: pointer;
 }

@@ -57,7 +57,9 @@ body {
 .linkedinLogo {
   width: 80px;
 }
-
+.photo-container{
+  justify-content: stretch;
+}
 .hr-text {
   line-height: 1em;
   position: relative;
@@ -91,6 +93,19 @@ body {
     background-color: #fcfcfa;
   }
 }
+.image-upload-label {
+  position: relative;
+  cursor: pointer;
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
 
 .google-btn-container {
   display: flex;
@@ -112,4 +127,34 @@ body {
     cursor: pointer;
     font-size: 18px;
   }
+}
+
+.image-upload-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+
+  label {
+    border: 1px solid #212121;
+    padding: 10px;
+    cursor: pointer;
+    font-family: system-ui;
+  }
+
+  .profile-image {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #cacaca;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .progress-bar {
+    padding: 20px;
+  }
+
 }

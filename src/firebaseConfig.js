@@ -7,7 +7,17 @@ import { getStorage } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {};
+const firebaseConfig = {
+ 
+        apiKey: "AIzaSyDBjGP6x-Rf08KkG_FtDe5OYudA5lF8I6c",
+        authDomain: "socialmedia-d3d44.firebaseapp.com",
+        projectId: "socialmedia-d3d44",
+        storageBucket: "socialmedia-d3d44.appspot.com",
+        messagingSenderId: "1079361607351",
+        appId: "1:1079361607351:web:54802e74b67c9789c81f32",
+        measurementId: "G-KRLW2WVFLR"
+      
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

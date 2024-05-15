@@ -1,0 +1,61 @@
+.majoring-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.majoring-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.resource-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resource-item {
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  position: relative;
+}
+
+.resource-subject {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0px 6px; // Adjusted padding for better appearance
+  background: lightblue;
+  border-radius: 5px;
+  max-width: 120px; // Set maximum width
+  word-wrap: break-word; // Allow text to wrap onto the next line
+  white-space: normal; // Allow text to wrap onto the next line
+  text-align: center;
+  font-size: 14px; // Adjusted font size for better readability
+  font-weight: bold; // Added font weight for emphasis
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Added box shadow for depth
+}
+
+
+
+.resource-title {
+  margin-bottom: 5px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.resource-about {
+  text-align: center;
+  margin-bottom: 5px;
+}

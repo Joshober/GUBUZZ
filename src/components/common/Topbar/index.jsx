@@ -6,14 +6,16 @@ import {
   AiOutlineHome,
   AiOutlineUserSwitch,
   AiOutlineSearch,
-  AiOutlineMessage,
-  AiOutlineBell,
+  
+  AiOutlineBook,
 } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { BsBriefcase } from "react-icons/bs";
 import { getAllUsers } from "../../../api/FirestoreAPI";
 import ProfilePopup from "../ProfilePopup";
 import "./index.scss";
+import { GoCalendar } from "react-icons/go";
+import { CiBellOn } from "react-icons/ci";
+import { CiBellOff } from "react-icons/ci";
 
 export default function Topbar({ currentUser }) {
   const [popupVisible, setPopupVisible] = useState(false);
@@ -21,6 +23,11 @@ export default function Topbar({ currentUser }) {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [isBellOn, setIsBellOn] = useState(true);
+
+  const toggleBell = () => {
+    setIsBellOn(!isBellOn);
+  };
   let navigate = useNavigate();
   const goToRoute = (route) => {
     navigate(route);
@@ -31,7 +38,7 @@ export default function Topbar({ currentUser }) {
   };
 
   const openUser = (user) => {
-    navigate("/profile", {
+    navigate("/profile/"+user.userID, {
       state: {
         id: user.id,
         email: user.email,
@@ -65,6 +72,7 @@ export default function Topbar({ currentUser }) {
   useEffect(() => {
     getAllUsers(setUsers);
   }, []);
+
   return (
     <div className="topbar-main">
       {popupVisible ? (
@@ -98,9 +106,25 @@ export default function Topbar({ currentUser }) {
             className="react-icon"
             onClick={() => goToRoute("/connections")}
           />
-          <BsBriefcase size={30} className="react-icon" />
-          <AiOutlineMessage size={30} className="react-icon" />
-          <AiOutlineBell size={30} className="react-icon" />
+          <GoCalendar size={30} className="react-icon" onClick={() => goToRoute("/feed")} />
+          <AiOutlineBook size={30} className="react-icon" onClick={() => goToRoute("/resources")} />
+          {isBellOn ? (
+            <CiBellOn
+              size={30}
+              className="react-icon"
+              onClick={toggleBell}
+              style={{ cursor: "pointer" }}
+
+            />
+          ) : (
+            <CiBellOff
+  size={30}
+  className="react-icon"
+  onClick={toggleBell}
+  style={{ cursor: "pointer" }}
+/>
+
+          )}
         </div>
       )}
       <img
@@ -118,8 +142,8 @@ export default function Topbar({ currentUser }) {
             <div className="search-inner">No Results Found..</div>
           ) : (
             filteredUsers.map((user) => (
-              <div className="search-inner" onClick={() => openUser(user)}>
-                <img src={user.imageLink} />
+              <div key={user.id} className="search-inner" onClick={() => openUser(user)}>
+                <img src={user.imageLink} alt="user" />
                 <p className="name">{user.name}</p>
               </div>
             ))

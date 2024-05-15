@@ -1,15 +1,18 @@
 .connections-main {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: auto auto;
   gap: 10px;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Horizontally center the grid */
+  align-items: center; /* Vertically center the grid */
   padding: 10px;
   text-align: center;
-  margin: 30px;
   border: 1px solid #bbbbbb;
   background-color: white;
   border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
   .grid-child {
     border: 1px solid #bbbbbb;
     width: 250px;

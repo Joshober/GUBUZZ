@@ -11,13 +11,13 @@ export default function ConnectedUsers({ user, getCurrentUser, currentUser }) {
     <></>
   ) : (
     <div className="grid-child">
-      <img src={user.imageLink} />
-      <p className="name">{user.name}</p>
-      <p className="headline">{user.headline}</p>
+      <img src={user.imageLink} style={{ marginBottom: "10px" }} />
+      <p className="name" style={{ marginBottom: "10px" }}>{user.name}</p>
+      <p className="headline" style={{ marginBottom: "10px" }}>{user.headline}</p>
 
       <button onClick={() => getCurrentUser(user.id)}>
         <AiOutlineUsergroupAdd size={20} />
-        Connect
+        Follow
       </button>
     </div>
   );

@@ -5,26 +5,30 @@ import "../Sass/ConnectionsComponent.scss";
 
 export default function ConnectionsComponent({ currentUser }) {
   const [users, setUsers] = useState([]);
+  
+  // Function to handle adding a connection
   const getCurrentUser = (id) => {
     addConnection(currentUser.id, id);
   };
+
   useEffect(() => {
-    getAllUsers(setUsers);
+    // Fetch all users and filter them based on the 'public' field
+    getAllUsers((allUsers) => {
+      const publicUsers = allUsers.filter(user => user.isPublic); // Filter users with 'public' field set to true
+      setUsers(publicUsers);
+    });
   }, []);
 
-  return users.length > 1 ? (
+  return users.length > 0 ? (
     <div className="connections-main">
-      {users.map((user) => {
-        return user.id === currentUser.id ? (
-          <></>
-        ) : (
-          <ConnectedUsers
-            currentUser={currentUser}
-            user={user}
-            getCurrentUser={getCurrentUser}
-          />
-        );
-      })}
+      {users.map((user) => (
+        <ConnectedUsers
+          key={user.id}
+          currentUser={currentUser}
+          user={user}
+          getCurrentUser={getCurrentUser}
+        />
+      ))}
     </div>
   ) : (
     <div className="connections-main">No Connections to Add!</div>

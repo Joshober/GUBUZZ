@@ -10,8 +10,45 @@
     cursor: pointer;
     font-family: system-ui;
   }
-
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #cacaca;
+    padding: 5px;
+    cursor: pointer;
+  }
   .progress-bar {
     padding: 20px;
   }
+  .image-upload-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .image-upload-main label {
+    border: 1px solid #212121;
+    padding: 10px;
+    cursor: pointer;
+    font-family: system-ui;
+  }
+  
+  .image-upload-main .profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #cacaca;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .image-upload-main .progress-bar {
+    padding: 20px;
+  }
+  
 }

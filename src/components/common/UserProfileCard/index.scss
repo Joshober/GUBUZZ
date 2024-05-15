@@ -1,0 +1,230 @@
+.profile-card {
+    width: 80%; /* Set width to 80% */
+    height: auto;
+    background-color: whitesmoke;
+    margin: 30px auto; /* Set auto margin for top/bottom and left/right to center horizontally */
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    .profile-info {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+  
+      .profile-image {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 2px solid #cacaca;
+        padding: 5px;
+        cursor: pointer;
+      }
+  
+      .profile-profile-center {
+        display: flex;
+        justify-content: space-evenly;
+      }
+  
+      .right-info {
+        margin-top: 25px;
+        margin-right: 20px;
+  
+        .college, .company {
+          font-family: system-ui;
+          color: rgba(0, 0, 0, 0.9);
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 30px;
+        }
+  
+        .company {
+          margin-top: -15px;
+        }
+      }
+    }
+  
+    .profile-info-container {
+      display: flex;
+      text-align: center;
+  
+      flex-direction: column;
+      margin-top: 25px;
+      justify-content: space-around;
+  
+      .info-item {
+        margin-bottom: 10px;
+  
+        .label {
+          font-weight: bold;
+          margin-right: 5px;
+        }
+  
+        .counter-block {
+          display: inline-block;
+          margin: 10px;
+        }
+  
+        .counter-block p {
+          margin-right: 10px;
+           text-align: center;
+        }
+  
+        .counter-block p strong {
+          display: block;
+        }
+  
+        .counter-block p:last-child {
+          margin-top: 5px;
+        }
+      }
+      .right-info {
+        .profile-profile-center {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: flex-start; /* Align items to the top */
+          margin-top: 0px;
+        
+          .counter-block {
+            margin: 0 10px;
+            text-align: center;
+        
+            p {
+              margin: 0;
+            }
+        
+            p strong {
+              display: block;
+            }
+        
+            p:last-child {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+      
+  
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px; /* Adjust margin top as needed */
+  
+        button {
+          background-color: #004284; /* Revert back to the old button color */
+          color: white;
+          border: 2px solid #004284; /* Add border */
+          padding: 10px 20px;
+          border-radius: 25px; /* Add border radius */
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      
+        .heading {
+          font-size: 18px;
+          margin-top: 10px;
+        }
+      
+        .location {
+          margin-top: 5px;
+        }
+      
+        .website {
+          margin-top: 5px;
+          color: #007bff;
+          text-decoration: none;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      
+    }
+  
+    .skill-label {
+      font-weight: 600;
+    }
+  .profile-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px; /* Adjust margin top as needed */
+  
+    .profile-image {
+      /* Your image styles */
+    }
+  
+    .userName {
+      /* Your username styles */
+    }
+  
+    .button-container {
+      margin-top: 10px; /* Adjust margin top as needed */
+    }
+  }
+  
+    button {
+      width: 120px;
+      height: 50px;
+      cursor: pointer;
+      background-color: #004284;
+      color: white;
+      border: 2px solid #004284;
+      font-size: 16px;
+      font-family: system-ui;
+      border-radius: 25px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 0 20px;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  
+      &:hover {
+        background-color: white;
+        color: #004284;
+      }
+    }
+  
+    .edit-btn {
+      position: absolute;
+      right: 20px;
+  
+      .edit-icon {
+        cursor: pointer;
+        padding: 10px;
+      }
+  
+      .edit-icon:hover {
+        background-color: rgb(197, 197, 197);
+        padding: 10px;
+        border-radius: 50%;
+      }
+    }
+  
+    .userName {
+      font-family: system-ui;
+      color: rgba(0, 0, 0, 0.9);
+      font-weight: 600;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  
+    .heading {
+      margin-top: -25px;
+      font-family: system-ui;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.9);
+      width: 320px;
+      line-height: 20px;
+    }
+  }
+  

@@ -4,6 +4,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import Loader from "../components/common/Loader";
+import SearchUsers from "../components/common/SearchUsers";
 
 export default function Connections({ currentUser }) {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,10 @@ export default function Connections({ currentUser }) {
   }, []);
   return loading ? (
     <Loader />
+    
   ) : (
+    
     <ConnectionsComponent currentUser={currentUser} />
+    
   );
 }

@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import Loader from "../components/common/Loader";
 
-export default function Profile({ currentUser }) {
-  const [loading, setLoading] = useState(true);
+export default function Profile({ currentUser, profileuser }) {
+  const [loading, setLoading] = useState();
   let navigate = useNavigate();
   useEffect(() => {
     onAuthStateChanged(auth, (res) => {
@@ -17,5 +17,5 @@ export default function Profile({ currentUser }) {
       }
     });
   }, []);
-  return loading ? <Loader /> : <ProfileComponent currentUser={currentUser} />;
+  return loading ? <Loader /> : <ProfileComponent profileuser= {profileuser} currentUser={currentUser} />;
 }
