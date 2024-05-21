@@ -30,4 +30,4 @@ To create the simplest user experience, users will not need to enter their infor
 # Resources Page
 ![Alt text](Screenshots/Resources.png)
 A page dedicated to providing users with easy access to resources for their major and education level. Users and Professors can submit resources to be uploaded and shared with all users who have access to this page.
-![Alt text](Screenshots/Resoruces2.png)
+![Alt text](Screenshots/Resources2.png)
