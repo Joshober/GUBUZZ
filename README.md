@@ -19,7 +19,7 @@ To help users thrive and reach new members and communities, the Connections page
 This page is dedicated to providing students with easy access to upcoming and recent events in one centralized location, regardless of who they follow. It includes a section for recent events like sports games, which can be clicked to view summaries, profiles, or event videos. This information is automatically pulled from various sources for up-to-date details, helping users plan their weeks effortlessly.
 
 #Profile Page
-![Alt text](Screenshots/Profile.png)
+![Alt text](Screenshots/profile.png)
 Profiles provide a centralized place for information on users or organizations. Each user has a unique page at GUHive/username, making it easy to look up and index users. Profiles also include a feed showing the history of all their posts.
 
 
