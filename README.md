@@ -28,6 +28,6 @@ Profiles provide a centralized place for information on users or organizations. 
 To create the simplest user experience, users will not need to enter their information when signing up or logging into Hive. Using Brightspace's OAuth 2.0, all information will be pulled into the user's account, allowing for quick access and instant updates of any user information each time they log in.
 
 # Resources Page
-![Alt text](Screenshots/resources.png)
+![Alt text](Screenshots/Resources.png)
 A page dedicated to providing users with easy access to resources for their major and education level. Users and Professors can submit resources to be uploaded and shared with all users who have access to this page.
-![Alt text](Screenshots/resoruces2.png)
+![Alt text](Screenshots/Resoruces2.png)
