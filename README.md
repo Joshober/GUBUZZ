@@ -1,4 +1,4 @@
-# GUBUZZ
+# GUHive
 Connecting students and keeping them informed about campus changes and events is a significant challenge for colleges nationwide. Despite various attempts using automated emails, poster boards, and student hires, success has proven elusive. Enter Hive: the ultimate solution to this predicament.
 
 Our innovative social media platform offers students a secure and dependable hub for all campus-related information and experiences. Revolutionizing convenience, our technology streamlines the process for busy students. Gone are the days of cumbersome logins, profile photo uploads, and data entry. With just one click, students activate their accounts, seamlessly integrating their Brightspace information.
